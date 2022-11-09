@@ -1,3 +1,4 @@
+// (( GLOBAL RULES ))
 * {
    box-sizing: border-box;
 }
@@ -15,7 +16,37 @@ ul {
    list-style: none;
    padding: 0;
 }
+::-webkit-scrollbar {
+   width: 15px;
+}
+::-webkit-scrollbar-track {
+   background-color: $red;
+}
+::-webkit-scrollbar-thumb {
+   background-color: $blue;
+   &:hover {
+      background-color: $blue-alt;
+   }
+}
 .page {
    background: #f1f5f9;
    min-height: 100vh;
+}
+// (( GLOBAL RULES ))
+
+// MEDIA \\
+.hide-mobile {
+   @media (max-width: 767px) {
+      display: none;
+   }
+}
+.block-mobile {
+   @media (max-width: 767px) {
+      display: block;
+   }
+}
+// MEDIA \\
+
+@mixin rad-50 {
+   border-radius: 50%;
 }

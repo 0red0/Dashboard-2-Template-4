@@ -1,0 +1,21 @@
+// h1 HEADING
+.page h1 {
+   margin: 20px 20px 40px;
+   &:before,
+   &:after {
+      content: "";
+      position: absolute;
+      bottom: -10px;
+      left: 0;
+      height: 3px;
+   }
+   &:before {
+      background-color: white;
+      width: 130px;
+   }
+   &:after {
+      background-color: black;
+      width: 40px;
+   }
+}
+// h1 HEADING
