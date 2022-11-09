@@ -1,6 +1,9 @@
-#Admin Dashboard.
-#Template 4 by Elzero web school.
+# Admin Dashboard.
 
-_Used HTML , SASS , JS , TS , Costume framework.
+## Template 4 by Elzero web school.
+
+- Uses HTML , SASS , JS , TS , Costume framework.
+
 <hr>
-Live Preview :- https://0red0.github.io/Dashboard-2-Template-4/
+
+Live Preview :-- https://0red0.github.io/Dashboard-2-Template-4/

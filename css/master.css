@@ -1,0 +1,74 @@
+.d-flex {
+  display: flex;
+}
+
+.align-c {
+  align-items: center;
+}
+
+.p-10 {
+  padding: 10px;
+}
+
+.p-20 {
+  padding: 20px;
+}
+
+.m-20 {
+  margin: 20px;
+}
+
+.mt-0 {
+  margin-top: 0;
+}
+
+.bg-white {
+  background-color: white;
+}
+
+.c-black {
+  color: #000;
+}
+
+.p-relative {
+  position: relative;
+}
+
+.txt-c {
+  text-align: center;
+}
+
+.fs-14 {
+  font-size: 14px;
+}
+
+.rad-6 {
+  border-radius: 6px;
+}
+
+* {
+  box-sizing: border-box;
+}
+
+body {
+  font-family: "Open Sans", sans-serif;
+  margin: 0;
+}
+
+*:focus {
+  outline: none;
+}
+
+a {
+  text-decoration: none;
+}
+
+ul {
+  list-style: none;
+  padding: 0;
+}
+
+.page {
+  background: #f1f5f9;
+  min-height: 100vh;
+}/*# sourceMappingURL=master.css.map */
