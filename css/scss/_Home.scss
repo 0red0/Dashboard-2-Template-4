@@ -277,3 +277,149 @@
    }
 }
 // LATEST UPLOAD
+// START LAST PROJECT
+.last-project {
+   ul {
+      &:before {
+         content: "";
+         position: absolute;
+         left: 11px;
+         width: 2px;
+         height: 100%;
+         background-color: $blue;
+      }
+      li {
+         &:before {
+            content: "";
+            width: 20px;
+            height: 20px;
+            display: inline-block;
+            @include rad-50;
+            border: 2px solid white;
+            background-color: white;
+            outline: 2px solid $blue;
+            margin-right: 15px;
+            z-index: 1;
+         }
+         &.done:before {
+            content: "";
+            background-color: $blue;
+         }
+         &.current:before {
+            animation: change-color 0.8s infinite alternate;
+         }
+      }
+   }
+   .launch-icon {
+      position: absolute;
+      width: 160px;
+      right: 0;
+      bottom: 0;
+      opacity: 0.3;
+   }
+}
+@keyframes change-color {
+   from {
+      background-color: $blue;
+   }
+   to {
+      background-color: white;
+   }
+}
+// START LAST PROJECT
+// REMINDERS
+.reminders {
+   ul {
+      li {
+         .key {
+            width: 15px;
+            height: 15px;
+         }
+         > .blue {
+            border-left: 2px solid $blue;
+         }
+         > .orange {
+            border-left: 2px solid $orange;
+         }
+         > .green {
+            border-left: 2px solid $green;
+         }
+         > .red {
+            border-left: 2px solid $red;
+         }
+      }
+   }
+}
+// REMINDERS
+// LATEST POST
+.latest-post {
+   .avatar {
+      width: 48px;
+      height: 48px;
+   }
+   .post-content {
+      text-transform: capitalize;
+      line-height: 1.8;
+      border-top: 1px solid #eee;
+      border-bottom: 1px solid #eee;
+      min-height: 140px;
+   }
+}
+// LATEST POST
+// SOCIAL MEDIA
+.social-media {
+   .box {
+      padding-left: 70px;
+      // overflow: hidden;
+      i,
+      svg {
+         box-sizing: border-box;
+         position: absolute;
+         left: 0;
+         top: 0;
+         width: 52px;
+         padding: 10px;
+         transition: 0.3s;
+         &:hover {
+            rotate: 3deg;
+         }
+      }
+   }
+   .twitter {
+      background-color: rgba(29, 160, 242, 0.267);
+      color: #1da1f2;
+      i,
+      a,
+      svg {
+         background-color: #1da1f2;
+      }
+   }
+   .facebook {
+      background-color: hsla(214, 89%, 52%, 0.247);
+      color: #1877f2;
+      i,
+      a,
+      svg {
+         background-color: #1877f2;
+      }
+   }
+   .youtube {
+      background-color: hsla(0, 100%, 50%, 0.253);
+      color: #ff0000;
+      i,
+      a,
+      svg {
+         background-color: #ff0000;
+      }
+   }
+   .linkedin {
+      background-color: hsla(201, 100%, 35%, 0.247);
+      color: #0077b5;
+      i,
+      a,
+      svg {
+         background-color: #0077b5;
+      }
+   }
+}
+// SOCIAL MEDIA
