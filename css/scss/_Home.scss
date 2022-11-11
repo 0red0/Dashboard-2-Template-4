@@ -12,6 +12,7 @@
 
 //    HEAD     \\
 .content {
+   overflow: hidden;
    .head {
       .search {
          &:before {
@@ -423,3 +424,55 @@
    }
 }
 // SOCIAL MEDIA
+// PROJECTS TABLE
+.projects {
+   .responsive-table {
+      overflow-x: auto;
+   }
+   table {
+      min-width: 1000px;
+      border-spacing: 0;
+      td {
+         padding: 15px;
+         .label {
+            padding: 4px 10px;
+            font-size: 13px;
+            border: none;
+            border-radius: 6px;
+            width: fit-content;
+         }
+      }
+      img {
+         width: 32px;
+         height: 32px;
+         border-radius: 50%;
+         padding: 2px;
+         background-color: white;
+         &:not(:first-child) {
+            margin-left: -20px;
+         }
+      }
+   }
+   thead {
+      td {
+         background-color: #eee;
+         font-weight: bold;
+      }
+   }
+   tbody {
+      tr {
+         td {
+            border-bottom: 1px solid #eee;
+            border-left: 1px solid #eee;
+            transition: 0.3s;
+            &:last-child {
+               border-right: 1px solid #eee;
+            }
+         }
+         &:hover td {
+            background-color: #faf7f7;
+         }
+      }
+   }
+}
+// PROJECTS TABLE
