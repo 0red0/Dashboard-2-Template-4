@@ -1,0 +1,185 @@
+.settings-page {
+   :disabled {
+      cursor: no-drop;
+      background-color: #f0f4f8;
+      color: #bbb;
+   }
+   grid-template-columns: repeat(auto-fit, minmax(500px, 1fr));
+   @media (max-width: 767px) {
+      grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+      margin-left: 10px;
+      margin-right: 10px;
+      gap: 10px;
+   }
+   .close-message {
+      border: 1px solid #ccc;
+      resize: none;
+      min-height: 150px;
+      width: 100%;
+   }
+   .email {
+      display: inline-flex;
+      width: calc(100% - 80px);
+      margin-right: 10px;
+   }
+   .sec-box {
+      &:not(:last-of-type) {
+         padding-bottom: 15px;
+         border-bottom: 1px solid #eee;
+      }
+   }
+   .social-boxes {
+      i,
+      svg {
+         width: 40px;
+         height: 40px;
+         background-color: #f6f6f6;
+         border: 1px solid #ddd;
+         border-right: none;
+         border-radius: 6px 0 0 6px;
+         transition: 0.3s;
+         box-sizing: border-box;
+         padding: 6px;
+      }
+      input {
+         height: 40px;
+         background-color: #f6f6f6;
+         border: 1px solid #ddd;
+         padding-left: 10px;
+         border-radius: 0 6px 6px 0;
+      }
+      > div:focus-within {
+         i,
+         svg {
+            color: black;
+         }
+      }
+   }
+   .widgets-control {
+      .control {
+         label {
+            padding-left: 30px;
+            cursor: pointer;
+            position: relative;
+            transition: 0.3s;
+            &:before {
+               content: "";
+               position: absolute;
+               left: 0;
+               top: 50%;
+               width: 14px;
+               height: 14px;
+               margin-top: -9px;
+               border: 2px solid $grey;
+            }
+            &:hover {
+               color: $blue-alt;
+               font-weight: 500;
+               &::before {
+                  border-color: $blue-alt;
+               }
+            }
+            &::after {
+               font-family: var(--fa-style-family-classic);
+               content: "\f00c";
+               font-weight: 900;
+               background-color: $blue;
+               color: white;
+               position: absolute;
+               left: 0;
+               top: 50%;
+               margin-top: -9px;
+               font-size: 12px;
+               width: 18px;
+               height: 18px;
+               display: flex;
+               align-items: center;
+               justify-content: center;
+               transform: scale(0) rotate(360deg);
+               transition: 0.3s;
+            }
+         }
+         input[type="checkbox"] {
+            appearance: none;
+            &:checked {
+               + label {
+                  &::after {
+                     transform: scale(1);
+                  }
+               }
+            }
+         }
+      }
+   }
+   .backup-control {
+      input[type="radio"] {
+         appearance: none;
+      }
+      .date {
+         label {
+            padding-left: 30px;
+            cursor: pointer;
+            position: relative;
+            &:before {
+               content: "";
+               position: absolute;
+               left: 0;
+               top: 50%;
+               width: 18px;
+               height: 18px;
+               margin-top: -11px;
+               border: 2px solid $grey;
+               border-radius: 50%;
+            }
+            &::after {
+               content: "";
+               position: absolute;
+               left: 5px;
+               top: 5px;
+               width: 12px;
+               height: 12px;
+               border-radius: 50%;
+               background-color: $blue;
+               transition: 0.3s;
+               transform: scale(0);
+            }
+         }
+         input:checked {
+            + label {
+               color: $blue-alt;
+               font-weight: 500;
+               &::before {
+                  border-color: $blue-alt;
+               }
+               &::after {
+                  transform: scale(1);
+               }
+            }
+         }
+      }
+      .servers {
+         border-top: 1px solid #eee;
+         padding-top: 20px;
+         @media (max-width: 767px) {
+            flex-wrap: wrap;
+         }
+         .server {
+            border: 2px solid #eee;
+            position: relative;
+            i,
+            svg {
+               margin: 0 auto 10px;
+            }
+            label {
+               cursor: pointer;
+            }
+         }
+         input[type="radio"]:checked {
+            + .server {
+               border-color: $blue;
+               color: $blue;
+            }
+         }
+      }
+   }
+}

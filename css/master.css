@@ -92,6 +92,10 @@
   margin: 0;
 }
 
+.m-15 {
+  margin: 15px;
+}
+
 .m-20 {
   margin: 20px;
 }
@@ -134,6 +138,10 @@
 
 .mb-10 {
   margin-bottom: 10px;
+}
+
+.mb-15 {
+  margin-bottom: 15px;
 }
 
 .mb-20 {
@@ -228,6 +236,10 @@
 
 .b-none {
   border: none;
+}
+
+.b-ccc {
+  border: 1px solid #ccc;
 }
 
 .rad-6 {
@@ -860,4 +872,176 @@ input.toggle-switch:checked:before {
 }
 .projects tbody tr:hover td {
   background-color: #faf7f7;
+}
+
+.settings-page {
+  grid-template-columns: repeat(auto-fit, minmax(500px, 1fr));
+}
+.settings-page :disabled {
+  cursor: no-drop;
+  background-color: #f0f4f8;
+  color: #bbb;
+}
+@media (max-width: 767px) {
+  .settings-page {
+    grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+    margin-left: 10px;
+    margin-right: 10px;
+    gap: 10px;
+  }
+}
+.settings-page .close-message {
+  border: 1px solid #ccc;
+  resize: none;
+  min-height: 150px;
+  width: 100%;
+}
+.settings-page .email {
+  display: inline-flex;
+  width: calc(100% - 80px);
+  margin-right: 10px;
+}
+.settings-page .sec-box:not(:last-of-type) {
+  padding-bottom: 15px;
+  border-bottom: 1px solid #eee;
+}
+.settings-page .social-boxes i,
+.settings-page .social-boxes svg {
+  width: 40px;
+  height: 40px;
+  background-color: #f6f6f6;
+  border: 1px solid #ddd;
+  border-right: none;
+  border-radius: 6px 0 0 6px;
+  transition: 0.3s;
+  box-sizing: border-box;
+  padding: 6px;
+}
+.settings-page .social-boxes input {
+  height: 40px;
+  background-color: #f6f6f6;
+  border: 1px solid #ddd;
+  padding-left: 10px;
+  border-radius: 0 6px 6px 0;
+}
+.settings-page .social-boxes > div:focus-within i,
+.settings-page .social-boxes > div:focus-within svg {
+  color: black;
+}
+.settings-page .widgets-control .control label {
+  padding-left: 30px;
+  cursor: pointer;
+  position: relative;
+  transition: 0.3s;
+}
+.settings-page .widgets-control .control label:before {
+  content: "";
+  position: absolute;
+  left: 0;
+  top: 50%;
+  width: 14px;
+  height: 14px;
+  margin-top: -9px;
+  border: 2px solid #888;
+}
+.settings-page .widgets-control .control label:hover {
+  color: #0d69d5;
+  font-weight: 500;
+}
+.settings-page .widgets-control .control label:hover::before {
+  border-color: #0d69d5;
+}
+.settings-page .widgets-control .control label::after {
+  font-family: var(--fa-style-family-classic);
+  content: "\f00c";
+  font-weight: 900;
+  background-color: #0075ff;
+  color: white;
+  position: absolute;
+  left: 0;
+  top: 50%;
+  margin-top: -9px;
+  font-size: 12px;
+  width: 18px;
+  height: 18px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  transform: scale(0) rotate(360deg);
+  transition: 0.3s;
+}
+.settings-page .widgets-control .control input[type=checkbox] {
+  -webkit-appearance: none;
+     -moz-appearance: none;
+          appearance: none;
+}
+.settings-page .widgets-control .control input[type=checkbox]:checked + label::after {
+  transform: scale(1);
+}
+.settings-page .backup-control input[type=radio] {
+  -webkit-appearance: none;
+     -moz-appearance: none;
+          appearance: none;
+}
+.settings-page .backup-control .date label {
+  padding-left: 30px;
+  cursor: pointer;
+  position: relative;
+}
+.settings-page .backup-control .date label:before {
+  content: "";
+  position: absolute;
+  left: 0;
+  top: 50%;
+  width: 18px;
+  height: 18px;
+  margin-top: -11px;
+  border: 2px solid #888;
+  border-radius: 50%;
+}
+.settings-page .backup-control .date label::after {
+  content: "";
+  position: absolute;
+  left: 5px;
+  top: 5px;
+  width: 12px;
+  height: 12px;
+  border-radius: 50%;
+  background-color: #0075ff;
+  transition: 0.3s;
+  transform: scale(0);
+}
+.settings-page .backup-control .date input:checked + label {
+  color: #0d69d5;
+  font-weight: 500;
+}
+.settings-page .backup-control .date input:checked + label::before {
+  border-color: #0d69d5;
+}
+.settings-page .backup-control .date input:checked + label::after {
+  transform: scale(1);
+}
+.settings-page .backup-control .servers {
+  border-top: 1px solid #eee;
+  padding-top: 20px;
+}
+@media (max-width: 767px) {
+  .settings-page .backup-control .servers {
+    flex-wrap: wrap;
+  }
+}
+.settings-page .backup-control .servers .server {
+  border: 2px solid #eee;
+  position: relative;
+}
+.settings-page .backup-control .servers .server i,
+.settings-page .backup-control .servers .server svg {
+  margin: 0 auto 10px;
+}
+.settings-page .backup-control .servers .server label {
+  cursor: pointer;
+}
+.settings-page .backup-control .servers input[type=radio]:checked + .server {
+  border-color: #0075ff;
+  color: #0075ff;
 }/*# sourceMappingURL=master.css.map */
