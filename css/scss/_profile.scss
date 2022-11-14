@@ -1,0 +1,106 @@
+.profile-page {
+   .overview {
+      @media (max-width: 767px) {
+         flex-direction: column;
+      }
+   }
+   .avatar-box {
+      width: 300px;
+      @media (min-width: 767px) {
+         border-right: 1px solid #eee;
+      }
+      > img {
+         width: 120px;
+         height: 120px;
+      }
+      .level {
+         width: 70%;
+         height: 6px;
+         overflow: hidden;
+         margin: auto;
+         span {
+            position: absolute;
+            left: 0;
+            top: 0;
+            height: 100%;
+            background-color: $blue;
+            border-radius: 6px;
+         }
+      }
+   }
+   .info-box {
+      .box {
+         flex-wrap: wrap;
+         border-bottom: 1px solid #eee;
+         transition: 0.3s;
+         &:hover {
+            background-color: #f9f9f9;
+         }
+         > div {
+            min-width: 250px;
+            padding: 10px 0 0;
+         }
+         h4 {
+            font-weight: normal;
+         }
+      }
+   }
+}
+.profile-page {
+   .other-data {
+      @media (max-width: 767px) {
+         flex-direction: column;
+      }
+   }
+   .skills-card {
+      ul {
+         li {
+            padding: 15px 0;
+            &:not(:last-child) {
+               border-bottom: 1px solid #eee;
+            }
+            span {
+               border-radius: 6px;
+               font-size: 14px;
+               display: inline-block;
+               padding: 4px 10px;
+               background-color: #eee;
+               &:not(:last-child) {
+                  margin-right: 5px;
+               }
+            }
+         }
+      }
+   }
+   .activities {
+      flex-grow: 1;
+      .activity {
+         &:not(:last-of-type) {
+            border-bottom: 1px solid #eee;
+            padding-bottom: 20px;
+            margin-bottom: 20px;
+         }
+         img {
+            width: 64px;
+            height: 64px;
+            margin-right: 10px;
+         }
+         .date {
+            margin-left: auto;
+            text-align: right;
+         }
+         @media (max-width: 767px) {
+            flex-direction: column;
+            img {
+               margin: 0;
+               margin-bottom: 15px;
+            }
+            .date {
+               margin: 0;
+               text-align: center;
+               margin-top: 15px;
+            }
+         }
+      }
+   }
+}
