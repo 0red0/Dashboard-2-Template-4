@@ -2,7 +2,7 @@
 
 ## Template 4 by Elzero web school.
 
-- Uses HTML , SASS , JS , TS , Costume framework.
+- Uses HTML , SASS , Costume framework.
 
 <hr>
 

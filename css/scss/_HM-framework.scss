@@ -179,7 +179,9 @@
 .p-relative {
    position: relative;
 }
-
+.p-abs {
+   position: absolute;
+}
 ///
 /// FONT
 
@@ -208,6 +210,9 @@
 ///  BORDER
 .b-none {
    border: none;
+}
+.b-eee {
+   border: 1px solid #eee;
 }
 .b-ccc {
    border: 1px solid #ccc;
